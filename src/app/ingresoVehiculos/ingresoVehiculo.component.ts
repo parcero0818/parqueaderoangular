@@ -2,14 +2,14 @@ import {Component} from '@angular/core';
 import {ParqueaderoService} from '../services/parqueadero.service';
 
 @Component({
-  selector: 'ingresoVehiculo',  //etiqueta donde se carga el componente
-  //template: `<h2>vista</h2>`  //plantilla asociada al componente
+  selector: 'vehiculo',  //etiqueta donde se carga el componente
+  //template: `<h2>vista</h2>`,  //plantilla asociada al componente
   templateUrl: './ingreso.component.html',
   providers:[ParqueaderoService]
 })
 
 export class IngresoComponent{
-  title = 'Ingreso';
+  public title = 'Ingreso';
   public trabajos:Array<string> = ['obrero', 'ingeniero'];
   public productos:Array<any>;
   constructor(
