@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import {IngresoComponent} from './ingresoVehiculos/ingresoVehiculo.component';
 import {ListaVehiculosParqueados} from './listaVehiculosParqueados/vehiculosparqueados.component';
 import {ParqueaderoService} from './services/parqueadero.service';
-
+import { FormsModule } from '@angular/forms'; //Para utilizar el ngModel en la vista
 import {HttpModule} from '@angular/http';
 
 @NgModule({
@@ -16,6 +16,7 @@ import {HttpModule} from '@angular/http';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpModule
   ],
   providers: [ParqueaderoService],
