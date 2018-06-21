@@ -3,6 +3,10 @@ import {Http, Response, Headers} from '@angular/http';
 import 'rxjs';
 import {Observable} from 'rxjs';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { map, take } from 'rxjs/operators';
+import 'rxjs/add/operator/map'
+
+
 
 @Injectable()
 export class ParqueaderoService{
@@ -17,9 +21,9 @@ export class ParqueaderoService{
   }
 
 
-    vehiculosParqueados(): Observable<any>{
+    vehiculosParqueados(){
       console.log('Entra');
-        return this._http.get(this.urlCarrosParqueados);
+        return this._http.get(this.urlCarrosParqueados).map(response => response.json());
     }
 
     // nombreServicio() {
