@@ -1,36 +1,12 @@
-<html>
-<head></head>
-<body>
-  Ingrese la placa del vehiculo <input name="placa" id="placa" />
+  <div>
+        <label>nombre:
+              <input type="text" [(ngModel)]="placa" placeholder="placa">
+          </label>
 
-  {{title}}
-
-  {{trabajos}}
-  <br>
-
-<h1>Vehiculos que están en el parqueadero</h1>
-<ul>
-  <li *ngFor="let vehiculo of vehiculos">
-      Placa: {{vehiculo.placaVehiculo}}
-      Tipo Vehiculo: {{vehiculo.tipoVehiculo}}
-      Fecha Ingreso: {{vehiculo.fechaEntrada}}
-  </li>
-</ul>
-
-
-<table >
-    <tr>
-      <th>Placa Vehiculo</th>
-      <th>Tipo Vehiculo</th>
-      <th>Fecha Entrada</th>
-    </tr>
-    <tr *ngFor="let vehiculo of vehiculos">
-      <td>{{vehiculo.placaVehiculo }}</td>
-      <td>{{ vehiculo.tipoVehiculo }}</td>
-      <td>{{ vehiculo.fechaEntrada }}</td>
-    </tr>
-</table>
-
-</body>
-
-</html>
+          <label>categoria:
+              <input [(ngModel)]="nuevoVehiculo.cilindraje" placeholder="categoria">
+          </label>
+          <label>cantidad Disponible:
+              <input [(ngModel)]="nuevoVehiculo.tipoVehiculo" placeholder="cantidad">
+          </label>
+      </div>
