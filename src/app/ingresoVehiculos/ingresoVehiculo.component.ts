@@ -14,7 +14,8 @@ export class IngresoComponent{
   public trabajos:Array<string> = ['obrero', 'ingeniero'];
   public vehiculos;
   nuevoVehiculo: Vehic = new Vehic();
-  public placa:string;
+  public placaVehiculoSalida:string;
+  public factura:factura;
   constructor(
     public _parqueaderoService: ParqueaderoService
   ){}
@@ -40,6 +41,23 @@ agregarVehiculo(){
                 this.vehiculos = result;
                 console.log(result);
                 if(!this.vehiculos){
+                  console.log("Error");
+                }
+            },
+              error => {
+                  console.log(<any>error);
+              }
+          );
+}
+
+consultarCostoParqueadero(){
+  console.log("placa "+ this.placaVehiculoSalida);
+  this._parqueaderoService.calcularCostoParqueadero(this.placaVehiculoSalida).subscribe(
+              result => {
+                this.factura = result;
+                console.log("factgura "+this.factura);
+                console.log(result);
+                if(!this.factura){
                   console.log("Error");
                 }
             },

@@ -16,9 +16,9 @@ export class ParqueaderoService{
   public urlSalidaVehiculo:string;
 
   constructor(private _http:Http){
-    this.urlIngresoVehiculo ="";
+    this.urlIngresoVehiculo ="http://localhost:6262/parqueadero/registrarIngreso";
     this.urlCarrosParqueados="http://localhost:6262/parqueadero/vehiculosParqueados";
-    this.urlSalidaVehiculo="";
+    this.urlSalidaVehiculo="http://localhost:6262/parqueadero/registrarSalida?placaVehiculo=";
   }
 
 
@@ -44,6 +44,11 @@ export class ParqueaderoService{
                        .map(response =>response);
 
 
+  }
+
+
+  calcularCostoParqueadero(placaVehiculo:string){
+    return this._http.get(this.urlSalidaVehiculo+placaVehiculo).map(response => response.json());
   }
 
     // nombreServicio() {

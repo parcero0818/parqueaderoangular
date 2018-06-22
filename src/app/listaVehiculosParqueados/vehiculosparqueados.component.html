@@ -1,22 +1,15 @@
 
-  Ingrese la placa del vehiculo <input name="placa" id="placa" />
-
-  {{title}}
-
-  {{trabajos}}
-  <br>
-
 <h1>Vehiculos que están en el parqueadero</h1>
-<ul>
+<!--<ul>
   <li *ngFor="let vehiculo of vehiculos">
       Placa: {{vehiculo.placaVehiculo}}
       Tipo Vehiculo: {{vehiculo.tipoVehiculo}}
       Fecha Ingreso: {{vehiculo.fechaEntrada}}
   </li>
-</ul>
+</ul>-->
 
-
-<table >
+<div style="align:center">
+<table align="center" border='1'>
     <tr>
       <th>Placa Vehiculo</th>
       <th>Tipo Vehiculo</th>
@@ -28,3 +21,4 @@
       <td>{{ vehiculo.fechaEntrada }}</td>
     </tr>
 </table>
+</div>
