@@ -14,11 +14,13 @@ export class ParqueaderoService{
   public urlIngresoVehiculo:string;
   public urlCarrosParqueados:string;
   public urlSalidaVehiculo:string;
+  public urlTrm:string;
 
   constructor(private _http:Http){
     this.urlIngresoVehiculo ="http://localhost:6262/parqueadero/registrarIngreso";
     this.urlCarrosParqueados="http://localhost:6262/parqueadero/vehiculosParqueados";
     this.urlSalidaVehiculo="http://localhost:6262/parqueadero/registrarSalida?placaVehiculo=";
+    this.urlTrm="http://localhost:6262/parqueadero/trm";
   }
 
 
@@ -48,6 +50,10 @@ export class ParqueaderoService{
 
 
   calcularCostoParqueadero(placaVehiculo:string){
+    return this._http.get(this.urlSalidaVehiculo+placaVehiculo).map(response => response.json());
+  }
+
+  trm(placaVehiculo:string){
     return this._http.get(this.urlSalidaVehiculo+placaVehiculo).map(response => response.json());
   }
 

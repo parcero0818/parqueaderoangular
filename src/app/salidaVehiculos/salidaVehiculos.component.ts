@@ -1,32 +1,31 @@
 import {Component, ViewChild} from '@angular/core';
 import {ParqueaderoService} from '../services/parqueadero.service';
-import {Vehic} from './vehic';
 import {factura} from './factura';
 
 @Component({
-  selector: 'vehiculo',  //etiqueta donde se carga el componente
+  selector: 'salidaVehiculo',  //etiqueta donde se carga el componente
   //template: `<h2>vista</h2>`,  //plantilla asociada al componente
-  templateUrl: './ingreso.component.html',
+  templateUrl: './salidaVehiculos.component.html',
   providers:[ParqueaderoService]
 })
 
-export class IngresoComponent{
-  public title = 'Ingreso';
-  public trabajos:Array<string> = ['obrero', 'ingeniero'];
-  public respuesta;
-  nuevoVehiculo: Vehic = new Vehic();
+export class SalidaComponent{
+
   public placaVehiculoSalida:string;
   public factura:factura;
   constructor(
     public _parqueaderoService: ParqueaderoService
   ){}
 
-agregarVehiculo(){
-  this._parqueaderoService.addVehiculo(this.nuevoVehiculo).subscribe(
+
+consultarCostoParqueadero(){
+  console.log("placa "+ this.placaVehiculoSalida);
+  this._parqueaderoService.calcularCostoParqueadero(this.placaVehiculoSalida).subscribe(
               result => {
-                this.respuesta = result;
+                this.factura = result;
+                console.log("factgura "+this.factura);
                 console.log(result);
-                if(!this.respuesta){
+                if(!this.factura){
                   console.log("Error");
                 }
             },

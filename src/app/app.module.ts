@@ -7,17 +7,25 @@ import {ListaVehiculosParqueados} from './listaVehiculosParqueados/vehiculosparq
 import {ParqueaderoService} from './services/parqueadero.service';
 import { FormsModule } from '@angular/forms'; //Para utilizar el ngModel en la vista
 import {HttpModule} from '@angular/http';
+import {SalidaComponent} from './salidaVehiculos/salidaVehiculos.component';
+import { RouterModule, Routes } from '@angular/router';
+import {TrmComponent} from './consultaTrm/trm.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     IngresoComponent,
-    ListaVehiculosParqueados
+    ListaVehiculosParqueados,
+    SalidaComponent,
+    TrmComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule
   ],
   providers: [ParqueaderoService],
   bootstrap: [AppComponent]

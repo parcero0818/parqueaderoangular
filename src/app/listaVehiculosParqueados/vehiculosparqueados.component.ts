@@ -17,7 +17,6 @@ export class ListaVehiculosParqueados{
   ){}
 
 ngOnInit(){
-
   this._parqueaderoService.listaVehiculosParqueados().subscribe(
               result => {
                 this.vehiculos = result;

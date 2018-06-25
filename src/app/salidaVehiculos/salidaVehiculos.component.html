@@ -1,0 +1,22 @@
+      <div>
+        <label>Ingrese Placa:
+            <input type="text" [(ngModel)]="placaVehiculoSalida" placeholder="Placa Vehiculo">
+        </label>
+        <br><br>
+
+        <button (click)="consultarCostoParqueadero()">Consultar Costo Parqueadero</button>
+        <br><br>
+        <div *ngIf="factura">
+          Placa Vehiculo:{{factura.placaVehiculo}}
+          <br>
+          Cilindraje Vehiculo: {{factura.cilindrajeVehiculo}}
+          <br>
+          Fecha Entrada: {{factura.fechaEntrada}}
+          <br>
+          Fecha Salida: {{factura.fechaSalida}}
+          <br>
+          Tipo Vehiculo: {{factura.tipoVehiculo}}
+          <br>
+          Costo Parqueo: {{factura.costoParqueo}}
+        </div>
+      </div>
