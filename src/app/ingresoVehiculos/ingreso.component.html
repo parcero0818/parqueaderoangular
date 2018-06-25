@@ -14,5 +14,7 @@
 
           <button (click)="agregarVehiculo()">Ingresar Vehiculo</button>
           <br>
+          <div *ngIf="respuesta">
           Respuesta del servicio: {{respuesta}}
+        </div>
       </div>

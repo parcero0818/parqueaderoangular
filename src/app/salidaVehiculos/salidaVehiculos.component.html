@@ -1,5 +1,5 @@
       <div>
-        <label>Ingrese Placa:
+        <label>Ingrese Placa del vehiculo:
             <input type="text" [(ngModel)]="placaVehiculoSalida" placeholder="Placa Vehiculo">
         </label>
         <br><br>
@@ -7,6 +7,8 @@
         <button (click)="consultarCostoParqueadero()">Consultar Costo Parqueadero</button>
         <br><br>
 
+        <div *ngIf="resultado">
           Costo del parqueadero:{{resultado}}
+        </div>
           <br>
       </div>
