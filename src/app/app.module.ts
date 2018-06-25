@@ -10,7 +10,7 @@ import {HttpModule} from '@angular/http';
 import {SalidaComponent} from './salidaVehiculos/salidaVehiculos.component';
 import { RouterModule, Routes } from '@angular/router';
 import {TrmComponent} from './consultaTrm/trm.component';
-
+//import { DateTimePickerModule  } from 'ng-pick-datetime';
 
 
 @NgModule({

@@ -10,23 +10,24 @@ import {ParqueaderoService} from '../services/parqueadero.service';
 
 export class TrmComponent{
   public respuesta;
+
   constructor(
     public _parqueaderoService: ParqueaderoService
   ){}
 
-obtenerTrm(){
-  // this._parqueaderoService.addVehiculo(this.nuevoVehiculo).subscribe(
-  //             result => {
-  //               this.respuesta = result._body;
-  //               console.log(result._body);
-  //               if(!this.respuesta){
-  //                 console.log("Error");
-  //               }
-  //           },
-  //             error => {
-  //                 console.log(<any>error);
-  //             }
-  //         );
+ngOnInit(){
+   this._parqueaderoService.trm().subscribe(
+              result => {
+                this.respuesta = result;
+                console.log(result);
+                if(!this.respuesta){
+                  console.log("Error");
+                }
+            },
+              error => {
+                  console.log(<any>error);
+              }
+           );
 }
 
 }

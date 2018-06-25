@@ -24,7 +24,7 @@ export class IngresoComponent{
 agregarVehiculo(){
   this._parqueaderoService.addVehiculo(this.nuevoVehiculo).subscribe(
               result => {
-                this.respuesta = result;
+                this.respuesta = result._body;
                 console.log(result);
                 if(!this.respuesta){
                   console.log("Error");

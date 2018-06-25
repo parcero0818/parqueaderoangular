@@ -1,17 +1,4 @@
   <div>
-        <label>nombre:
-              <input type="text" [(ngModel)]="nuevoVehiculo.placa" placeholder="Placa">
-          </label>
-          <br><br>
-          <label>categoria:
-              <input type="number" [(ngModel)]="nuevoVehiculo.cilindraje" placeholder="Cilindraje">
-          </label>
-          <br><br>
-          <label>cantidad Disponible:
-              <input type="text" [(ngModel)]="nuevoVehiculo.tipoVehiculo" placeholder="Tipo Vehiculo">
-          </label>
-          <br><br>
-
           <button (click)="agregarVehiculo()">Ingresar Vehiculo</button>
           <br>
           Respuesta del servicio: {{respuesta}}

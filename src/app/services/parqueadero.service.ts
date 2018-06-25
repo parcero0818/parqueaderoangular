@@ -53,8 +53,8 @@ export class ParqueaderoService{
     return this._http.get(this.urlSalidaVehiculo+placaVehiculo).map(response => response.json());
   }
 
-  trm(placaVehiculo:string){
-    return this._http.get(this.urlSalidaVehiculo+placaVehiculo).map(response => response.json());
+  trm(){
+    return this._http.get(this.urlTrm).map(response => response.json());
   }
 
     // nombreServicio() {
