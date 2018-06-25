@@ -12,7 +12,8 @@ import {factura} from './factura';
 export class SalidaComponent{
 
   public placaVehiculoSalida:string;
-  public factura:factura;
+  //public factura:factura;
+  public resultado:string;
   constructor(
     public _parqueaderoService: ParqueaderoService
   ){}
@@ -22,10 +23,10 @@ consultarCostoParqueadero(){
   console.log("placa "+ this.placaVehiculoSalida);
   this._parqueaderoService.calcularCostoParqueadero(this.placaVehiculoSalida).subscribe(
               result => {
-                this.factura = result;
-                console.log("factgura "+this.factura);
+                this.resultado = result._body;
+                console.log("factgura "+this.resultado);
                 console.log(result);
-                if(!this.factura){
+                if(!this.resultado){
                   console.log("Error");
                 }
             },

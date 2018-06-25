@@ -6,17 +6,7 @@
 
         <button (click)="consultarCostoParqueadero()">Consultar Costo Parqueadero</button>
         <br><br>
-        <div *ngIf="factura">
-          Placa Vehiculo:{{factura.placaVehiculo}}
+
+          Costo del parqueadero:{{resultado}}
           <br>
-          Cilindraje Vehiculo: {{factura.cilindrajeVehiculo}}
-          <br>
-          Fecha Entrada: {{factura.fechaEntrada}}
-          <br>
-          Fecha Salida: {{factura.fechaSalida}}
-          <br>
-          Tipo Vehiculo: {{factura.tipoVehiculo}}
-          <br>
-          Costo Parqueo: {{factura.costoParqueo}}
-        </div>
       </div>

@@ -50,7 +50,7 @@ export class ParqueaderoService{
 
 
   calcularCostoParqueadero(placaVehiculo:string){
-    return this._http.get(this.urlSalidaVehiculo+placaVehiculo).map(response => response.json());
+    return this._http.get(this.urlSalidaVehiculo+placaVehiculo).map(response => response;
   }
 
   trm(){
