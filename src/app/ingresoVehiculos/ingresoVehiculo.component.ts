@@ -7,7 +7,8 @@ import {factura} from './factura';
   selector: 'vehiculo',  //etiqueta donde se carga el componente
   //template: `<h2>vista</h2>`,  //plantilla asociada al componente
   templateUrl: './ingreso.component.html',
-  providers:[ParqueaderoService]
+  providers:[ParqueaderoService],
+  styleUrls: ['./ingreso.component.css']
 })
 
 export class IngresoComponent{

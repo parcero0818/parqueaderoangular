@@ -5,7 +5,8 @@ import {ParqueaderoService} from '../services/parqueadero.service';
   selector: 'trm',  //etiqueta donde se carga el componente
   //template: `<h2>vista</h2>`,  //plantilla asociada al componente
   templateUrl: './trm.component.html',
-  providers:[ParqueaderoService]
+  providers:[ParqueaderoService],
+  styleUrls: ['./trm.component.css']
 })
 
 export class TrmComponent{
