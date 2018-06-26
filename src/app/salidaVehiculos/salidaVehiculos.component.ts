@@ -6,7 +6,8 @@ import {factura} from './factura';
   selector: 'salidaVehiculo',  //etiqueta donde se carga el componente
   //template: `<h2>vista</h2>`,  //plantilla asociada al componente
   templateUrl: './salidaVehiculos.component.html',
-  providers:[ParqueaderoService]
+  providers:[ParqueaderoService],
+  styleUrls:['./salidaVehiculos.component.css']
 })
 
 export class SalidaComponent{

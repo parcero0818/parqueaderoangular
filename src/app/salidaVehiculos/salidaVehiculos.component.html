@@ -1,11 +1,11 @@
       <div>
         <h2>Salida de vehiculo</h2>
         <label>Ingrese Placa del vehiculo:
-            <input type="text" [(ngModel)]="placaVehiculoSalida" placeholder="Placa Vehiculo">
+            <input class="input" type="text" [(ngModel)]="placaVehiculoSalida" placeholder="Placa Vehiculo">
         </label>
         <br><br>
 
-        <button (click)="consultarCostoParqueadero()">Consultar Costo Parqueadero</button>
+        <button class="boton" (click)="consultarCostoParqueadero()">Consultar Costo Parqueadero</button>
         <br><br>
 
         <div *ngIf="resultado">
